@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Convite Especial</title>
+  <title>Convite Romântico</title>
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
@@ -22,11 +23,13 @@
       text-align: center;
       padding: 20px;
     }
+
     h1 {
       font-size: 2rem;
       margin-bottom: 20px;
       color: #c0392b;
     }
+
     .buttons {
       display: flex;
       gap: 20px;
@@ -34,6 +37,7 @@
       flex-wrap: wrap;
       justify-content: center;
     }
+
     button {
       padding: 10px 20px;
       font-size: 1rem;
@@ -42,15 +46,18 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
+
     #yes {
       background-color: #27ae60;
       color: white;
     }
+
     #no {
       background-color: #e74c3c;
       color: white;
       position: relative;
     }
+
     #options {
       display: none;
       gap: 20px;
@@ -58,6 +65,7 @@
       justify-content: center;
       max-width: 1000px;
     }
+
     .restaurant {
       background: white;
       padding: 15px;
@@ -66,16 +74,19 @@
       max-width: 300px;
       flex: 1;
     }
+
     .restaurant img {
       width: 100%;
       height: 200px;
       object-fit: cover;
       border-radius: 10px;
     }
+
     .restaurant p {
       margin-top: 10px;
       font-weight: bold;
     }
+
     .restaurant a {
       display: inline-block;
       margin-top: 10px;
@@ -86,6 +97,7 @@
       text-decoration: none;
       font-weight: bold;
     }
+
     @media (max-width: 768px) {
       #options {
         flex-direction: column;
@@ -108,23 +120,25 @@
     <div class="restaurant">
       <img src="https://cdn0.casamentos.com.br/usr/7/6/2/7/cfb_481030.jpg" alt="Café da Manhã Romântico em Paris">
       <p>☕ Opção 1: Café da Manhã Romântico</p>
-      <a href="https://wa.me/5516981328240?text=Ol%C3%A1%20Sr%20Guilherme%2C%20irei%20aceitar%20o%20seu%20convite%20para%20um%20Caf%C3%A9%20da%20Manh%C3%A3%20Rom%C3%A2ntico%20%E2%9D%A4%EF%B8%8F!" target="_blank">Escolher</a>
+      <a href="https://wa.me/5516981328240?text=Olá%20Sr%20Guilherme%2C%20irei%20aceitar%20o%20seu%20convite%20para%20um%20Café%20da%20Manhã%20Romântico%20❤️!" target="_blank">Escolher</a>
     </div>
     <div class="restaurant">
       <img src="https://media.istockphoto.com/id/914137220/pt/foto/toast-to-our-love.jpg?s=612x612&w=0&k=20&c=NilVWdrbWMGDB1HBYVXVCoveqyl26Q78A_u8clTxnQk=" alt="Almoço Romântico">
       <p>🍽️ Opção 2: Almoço Romântico</p>
-      <a href="https://wa.me/5516981328240?text=Ol%C3%A1%20Sr%20Guilherme%2C%20irei%20aceitar%20o%20seu%20convite%20para%20um%20Almo%C3%A7o%20Rom%C3%A2ntico%20%E2%9D%A4%EF%B8%8F!" target="_blank">Escolher</a>
+      <a href="https://wa.me/5516981328240?text=Olá%20Sr%20Guilherme%2C%20irei%20aceitar%20o%20seu%20convite%20para%20um%20Almoço%20Romântico%20❤️!" target="_blank">Escolher</a>
     </div>
     <div class="restaurant">
       <img src="https://blog.covabra.com.br/wp-content/uploads/2024/06/Jantar-romantico-com-receitas-praticas-para-conquistar-o-seu-amor.png" alt="Jantar à Luz de Velas">
       <p>🍷 Opção 3: Jantar Romântico</p>
-      <a href="https://wa.me/5516981328240?text=Ol%C3%A1%20Sr%20Guilherme%2C%20irei%20aceitar%20o%20seu%20convite%20para%20um%20Jantar%20Rom%C3%A2ntico%20%E2%9D%A4%EF%B8%8F!" target="_blank">Escolher</a>
+      <a href="https://wa.me/5516981328240?text=Olá%20Sr%20Guilherme%2C%20irei%20aceitar%20o%20seu%20convite%20para%20um%20Jantar%20Romântico%20❤️!" target="_blank">Escolher</a>
     </div>
   </div>
+
   <script>
     const noButton = document.getElementById('no');
     const yesButton = document.getElementById('yes');
     const optionsDiv = document.getElementById('options');
+
     function moveButtonRandomly(button) {
       const maxX = window.innerWidth - button.offsetWidth;
       const maxY = window.innerHeight - button.offsetHeight;
@@ -134,9 +148,20 @@
       button.style.left = `${x}px`;
       button.style.top = `${y}px`;
     }
-    function handleNoClick() { moveButtonRandomly(noButton); }
-    function handleNoTouch() { moveButtonRandomly(noButton); }
-    function handleYesClick() { optionsDiv.style.display = 'flex'; }
+
+    function handleNoClick() {
+      moveButtonRandomly(noButton);
+    }
+
+    function handleNoTouch() {
+      moveButtonRandomly(noButton);
+    }
+
+    function handleYesClick() {
+      optionsDiv.style.display = 'flex';
+      noButton.style.display = 'none';
+    }
+
     noButton.addEventListener('mouseover', handleNoClick);
     noButton.addEventListener('click', handleNoTouch);
     yesButton.addEventListener('click', handleYesClick);
